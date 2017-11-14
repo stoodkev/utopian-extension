@@ -1,0 +1,93 @@
+.utopian-tags-cont,
+.utopian-categories-cont {
+    clear: both;
+    margin-top: 15px;
+    border-top: 1px solid #DDD;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    float: left;
+    width: 100%;
+}
+.utopian-categories-cont .utopian-categories {
+    display: flex;
+    justify-content: flex-start;
+}
+.utopian-categories label {
+    margin-right: 15px;
+    cursor: pointer;
+}
+.utopian-categories input{
+    display: none;
+}
+.utopian-categories input + span {
+    padding: 5px;
+    color: #444;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+}
+.utopian-categories .ideas input:checked + span{
+    background-color: #54d2a0;
+    color: #FFF;
+    border: 1px solid #54d2a0;
+}
+.utopian-categories .bug-hunting input:checked + span{
+    background-color: #d9534f;
+    color: #FFF;
+    border: 1px solid #d9534f;
+}
+
+.utopian-tags-cont .utopian-tags input {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #DDD;
+    margin-top: 7.5px;
+}
+.utopian-post-cont {
+    padding: 10px;
+    position: absolute;
+    bottom: 2px;
+    right: 180px;
+}
+.utopian-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.utopian-vote-cont {
+    margin-left: 70px;
+    padding-bottom: 10px;
+}
+.utopian-vote .utopian-vote-img {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.utopian-vote-cont .utopian-vote {
+    border: 1px solid #0176D8;
+    border-radius: 3px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.utopian-vote .utopian-thumbup{
+    line-height: 30px;
+    padding-right: 5px;
+    padding-left: 5px;
+    color: #0176D8;
+    text-align: center;
+    border-left: 1px solid #0176D8;
+}
+.utopian-vote .votes {
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 14px;
+    color: #24292E;
+    border-left: 1px solid #0176D8;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+}

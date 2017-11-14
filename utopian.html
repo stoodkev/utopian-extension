@@ -1,0 +1,217 @@
+
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+<head>
+    <title>Utopian - Get Rewarded for Contributing to Open Source Projects</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 15px;
+            white-space: nowrap;
+        }
+        h1 {
+            margin: 0;
+            font-size: 21px;
+            display: flex;
+            justify-content: flex-start;
+            border-bottom: 1px solid #DDDDDD;
+            padding-bottom: 7.5px;
+        }
+        .utopian-icon {
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .utopian-title {
+            line-height: 32px;
+            color: #959595;
+            vertical-align: middle;
+        }
+        .utopian-name {
+            color: #444;
+        }
+        #container {
+            text-align: center;
+            color: #0A0A0A;
+            font-size: 16px;
+        }
+        #welcome-cont {
+            display: block;
+        }
+        #welcome {
+            text-align: center;
+            color: #0176D8;
+            font-size: 20px;
+        }
+        #sign-github-intro {
+            display: block;
+        }
+        #sign-github {
+            display: flex;
+            justify-content: center;
+            margin:0 auto;
+            width: 256px;
+            height: 50px;
+            color: #FFF;
+            background: #161514;
+            border-radius: 3px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+        }
+        #sign-github img {
+            vertical-align: middle;
+            width: 28px;
+            height: 28px;
+            margin-right: 7.5px;
+        }
+        #sign-github span {
+            vertical-align: middle;
+            border-left: 1px solid #505050;
+            padding-left: 7.5px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+        #connected {
+            display: block;
+        }
+        #connected h4 {
+            color: #272727;
+            font-size: 14px;
+        }
+        #connection-details {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #connection-details > div > span:first-of-type {
+            display: block;
+            font-size: 12px;
+            color: #A6A6A6;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        #utopian-account-name,
+        #github-account-name {
+            color: #0176D8;
+            font-size: 16px;
+        }
+        #connection-actions {
+            display: block;
+        }
+        #must-authorise {
+            display: block;
+        }
+        #must-authorise-btn {
+            display: flex;
+            justify-content: center;
+            margin:0 auto;
+            width: 256px;
+            height: 50px;
+            color: #FFF;
+            background: #0176D8;
+            border-radius: 3px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+        }
+        #must-authorise-btn img {
+            color: white;
+            vertical-align: middle;
+            width: 15px;
+            height: 18px;
+            margin-right: 7.5px;
+        }
+        #must-authorise-btn span {
+            vertical-align: middle;
+            padding-left: 7.5px;
+            font-size: 18px;
+        }
+        #must-sync-github {
+            display: block;
+        }
+        #must-sync-github-btn {
+            display: flex;
+            justify-content: center;
+            margin:0 auto;
+            width: 256px;
+            height: 50px;
+            color: #FFF;
+            background: #0176D8;
+            border-radius: 3px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+        }
+        #must-sync-github-btn img {
+            color: white;
+            vertical-align: middle;
+            width: 28px;
+            height: 28px;
+            margin-right: 7.5px;
+        }
+        #must-sync-github-btn span {
+            vertical-align: middle;
+            padding-left: 7.5px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+    </style>
+    <script src="utopian.js"></script>
+</head>
+
+<body>
+<h1>
+    <img class="utopian-icon" src="utopian-icon.png">
+    <span class="utopian-title"><span class="utopian-name">Utopian</span> for Chrome</span>
+</h1>
+<div id="container">
+    <div id="welcome-cont">
+        <h2 id="welcome">Welcome</h2>
+        <p id="sign-github-intro">
+            To use Utopian Chrome <br/> login into your Github account.
+        </p>
+        <button id="sign-github">
+            <img src="github-btn-logo.png">
+            <span>Sign in with Github</span>
+        </button>
+    </div>
+    <div id="connected">
+        <h4>You are logged with the following credentials</h4>
+        <div id="connection-details">
+            <div id="github-account">
+                <span>GITHUB ACCOUNT</span>
+                <span id="github-account-name"></span>
+            </div>
+            <div id="utopian-account">
+                <span>UTOPIAN ACCOUNT</span>
+                <span id="utopian-account-name"></span>
+            </div>
+        </div>
+    </div>
+    <div id="connection-actions">
+        <div id="must-authorise">
+            <p>Github synced successfully. <br/> Authorise Utopian to post from Github</p>
+            <button id="must-authorise-btn">
+                <img src="must-authorise.png">
+                <span>Authorise Utopian</span>
+            </button>
+        </div>
+        <div id="must-sync-github">
+            <p>Sync your Github account with Utopian</p>
+            <button id="must-sync-github-btn">
+                <img src="github-btn-logo.png">
+                <span>Sync Github</span>
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
